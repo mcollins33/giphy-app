@@ -32,6 +32,7 @@ function displayGifs() {
 
             var princessId = "princess" + i;
             var princessDiv = $("<div>").attr("id", princessId);
+            $(princessDiv).addClass("float");
             $("#pictures").append(princessDiv);
 
             var rating = response.data[i].rating;
@@ -55,7 +56,9 @@ function displayGifs() {
 
     });
 
-    $(document).on("click", ".image", function(event) {
+}
+
+$(document).on("click", ".image", function(event) {
         console.log(this);
         if ($(this).attr("animate") === "still") {
             $(this).attr("src", $(this).attr("linka"));
@@ -65,14 +68,6 @@ function displayGifs() {
             $(this).attr("animate", "still");
         }
     });
-}
-
-
-
-
-
-
-
 
 $("#add-gif").on("click", function(event) {
     event.preventDefault();

@@ -1,13 +1,38 @@
 .topic {
-	background: magenta;
-	color: black;
-	margin: 10px;
-	padding: 10px;
+    background: magenta;
+    color: black;
+    margin: 10px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 h1 {
-	color: magenta;
-	font-size: 100px;
-	font-family: 'Pinyon Script', cursive;
+    color: magenta;
+    font-size: 100px;
+    font-family: 'Pinyon Script', cursive;
 }
 
+.float {
+    float: left;
+    margin: 10px;
+    font-weight: bold;
+}
+
+#add-gif {
+    background: magenta;
+    color: black;
+    margin: 10px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#gif-input {
+    height: 44px;
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 10px;
+}
