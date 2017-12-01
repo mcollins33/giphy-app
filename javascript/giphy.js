@@ -12,6 +12,7 @@ function renderButtons() {
         a.attr("data-name", topics[i]);
         a.text(topics[i]);
         $(".buttons").append(a);
+        $("#gif-input").val("");
     }
 }
 
@@ -59,22 +60,25 @@ function displayGifs() {
 }
 
 $(document).on("click", ".image", function(event) {
-        console.log(this);
-        if ($(this).attr("animate") === "still") {
-            $(this).attr("src", $(this).attr("linka"));
-            $(this).attr("animate", "animate");
-        } else {
-            $(this).attr("src", $(this).attr("links"));
-            $(this).attr("animate", "still");
-        }
-    });
+    console.log(this);
+    if ($(this).attr("animate") === "still") {
+        $(this).attr("src", $(this).attr("linka"));
+        $(this).attr("animate", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("links"));
+        $(this).attr("animate", "still");
+    }
+});
 
 $("#add-gif").on("click", function(event) {
     event.preventDefault();
     var gifNew = $("#gif-input").val().trim();
     topics.push(gifNew);
     renderButtons();
+
 });
+
+
 
 renderButtons();
 
