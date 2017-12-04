@@ -16,7 +16,6 @@ function renderButtons() {
     }
 }
 
-
 function displayGifs() {
 
     var gif = $(this).attr("data-name");
@@ -60,7 +59,6 @@ function displayGifs() {
 }
 
 $(document).on("click", ".image", function(event) {
-    console.log(this);
     if ($(this).attr("animate") === "still") {
         $(this).attr("src", $(this).attr("linka"));
         $(this).attr("animate", "animate");
@@ -78,10 +76,7 @@ $("#add-gif").on("click", function(event) {
 
 });
 
-
-
 renderButtons();
 
-
-
 $(document).on("click", ".topic", displayGifs);
+
